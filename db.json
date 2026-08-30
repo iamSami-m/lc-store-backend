@@ -4,43 +4,43 @@
       "id": "1",
       "name": "زنانه",
       "slug": "women",
-      "img": "/cat/women2.png"
+      "img": "/women2.png"
     },
     {
       "id": "2",
       "name": "مردانه",
       "slug": "men",
-      "img": "/cat/men1.png"
+      "img": "/men1.png"
     },
     {
       "id": "3",
       "name": "کیف",
       "slug": "bags",
-      "img": "/cat/bag.png"
+      "img": "/bag.png"
     },
     {
       "id": "4",
       "name": "کفش",
       "slug": "shoes",
-      "img": "/cat/shoes.png"
+      "img": "/shoes.png"
     },
     {
       "id": "5",
       "name": "روسری",
       "slug": "scarf",
-      "img": "/cat/scarf&hat.png"
+      "img": "/scarf&hat.png"
     },
     {
       "id": "6",
       "name": "اکسسوری",
       "slug": "accessories",
-      "img": "/cat/Accessory.png"
+      "img": "/Accessory.png"
     },
     {
       "id": "7",
       "name": "همه محصولات",
       "slug": "َAll",
-      "img": "/cat/Allproducts.png"
+      "img": "/Allproducts.png"
     }
   ],
   "types": [
