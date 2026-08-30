@@ -10,4 +10,4 @@ export function getAllWishes(id){
         console.log(wishlist)
         return wishlist
     
-}
+} 
