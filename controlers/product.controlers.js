@@ -25,7 +25,6 @@ export function getProductByIdControler(req,res,next)
     
 }
 
-
 export function  createProductController(req,res,next){
     const {title,categoryId,typeId,image,price,brand,description,stock,colors,sizes}=req.body
     
@@ -34,7 +33,7 @@ export function  createProductController(req,res,next){
             return res.status(400).json({message:"Bad Request"})
         }
         const newProduct=createProduct(title,categoryId,typeId,image,price,brand,description,stock,colors,sizes)
-        console.log(newProduct)
+        
         if(newProduct){
             return res.status(201).json(newProduct)
         }
@@ -67,16 +66,13 @@ export function editProductControler(req,res,next){
 }
 
 export function deleteProductControler(req,res,next){
-
     try {
         const id=Number(req.params.id)
 
     if(Number.isNaN(id)){
         return res.status(400).json({message:"Bad Request"})
     }
-
     const deletedProduct=deleteProductById(id)
-
     if(!deletedProduct){
         return res.status(404).json({message:"the product not exist"})
     }

@@ -1,4 +1,4 @@
-import fs from "fs"
+ import fs from "fs"
 
 const data=fs.readFileSync("./db.json","utf-8")
 const db=JSON.parse(data)
@@ -33,7 +33,7 @@ export function createProduct(title,categoryId,typeId,image,price,brand,descript
         "colors": colors,
         "sizes": sizes
     }
-    console.log(productId)
+    
     db.products.push(newProduct)
    const newdb=JSON.stringify(db,null,2)
     fs.writeFileSync("./db.json",newdb)
@@ -53,7 +53,21 @@ export function editProductById(id, editedProduct){
     {
         return null
     }
-
+    //object.assign
+    //برای ترکیب کردن ویژگی های چند
+    //object
+    //استفاده میشود مثلا
+    //const user={
+    //  name: "Ali",
+    //  age:20
+    //};
+    //object.assign(user, {age: 21});
+    //نتیجه
+    //{
+    //  name: "Ali",
+    //  age:21
+    //}
+    
     Object.assign(product,editedProduct)
 
     fs.writeFileSync("db.json",
@@ -74,9 +88,7 @@ export function deleteProductById(id){
         // و عناصر حذف‌شده را به‌صورت یک آرایه برمی‌گرداند.
        //آرایه اصلی هم تغییر میکند  و برخی از عناصرش حذف میشود
 
-       const deletedProduct=db.product.splice(index,1)
-
-       db.writeFileSync(
+       const deletedProduct=db.products.splice(index,1)
         "db.json",
         JSON.stringify(db, null, 2)
     );

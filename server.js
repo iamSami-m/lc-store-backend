@@ -8,6 +8,8 @@ import { errorHandler } from "./middlewares/error.middleware.js";
 import wislistRouter from "./routers/wishlist.router.js"
 import orderRouter from "./routers/order.router.js"
 import typeRouter from "./routers/type.router.js"
+import provinceRouter from "./routers/province.router.js"
+import addressRouter from "./routers/address.router.js"
 
 const app=express()
 
@@ -22,6 +24,8 @@ app.use("/categories",categoryRouter)
 app.use("/wishlists",wislistRouter)
 app.use("/orders",orderRouter)
 app.use("/types",typeRouter)
+app.use("/provinces",provinceRouter)
+app.use("/addresses",addressRouter)
 
 
 app.use(errorHandler)

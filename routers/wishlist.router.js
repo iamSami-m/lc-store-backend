@@ -1,8 +1,11 @@
 import express from "express"
-import { wishlistControler } from "../controlers/wishlist.controlers.js"
+import { getwishlistControler,createNewWishControler, deleteWishByIdControler } from "../controlers/wishlist.controlers.js"
 
 const router=express.Router()
 
-router.get("/",wishlistControler)
+router.get("/",getwishlistControler)
+router.post("/",createNewWishControler)
+router.delete("/:id",deleteWishByIdControler)
+
 
 export default router
